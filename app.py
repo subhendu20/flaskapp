@@ -31,7 +31,7 @@ class User(db.Model):
 
 @app.route('/')
 def login():
-          cookie = request.cookies.get('csrftoken')
+          cookie = request.cookies.get('auth')
           if cookie is not None:
                     return render_template('index.html')
           else:
